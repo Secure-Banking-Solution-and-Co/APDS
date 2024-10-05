@@ -1,1 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
+/* Container styling */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7; /* Light Grey background */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading styling */
+  h1 {
+    text-align: center;
+    color: #2c3e50; /* Dark Blackish Blue for headings */
+    font-family: 'Arial', sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  /* Label styling */
+  label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #34495e; /* Greyish Black for labels */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+  }
+  
+  /* Input fields styling */
+  input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #bdc3c7; /* Medium Grey border */
+    border-radius: 4px;
+    background-color: #fff; /* White background */
+    font-size: 16px;
+    color: #34495e; /* Text color */
+    box-sizing: border-box;
+  }
+  
+  /* Submit button styling */
+  button {
+    background-color: #3498db; /* Sky Blue */
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for the button */
+  button:hover {
+    background-color: #2980b9; /* Deep Blue on hover */
+  }
+  
+  /* Disabled button state */
+  button:disabled {
+    background-color: #bdc3c7; /* Medium Grey for disabled state */
+  }
+  
+  /* Error messages */
+  p {
+    color: red;
+    font-size: 14px;
+  }
+  
+  /* Success messages */
+  .success {
+    color: #2ecc71; /* Soft Green for success messages */
+    font-size: 14px;
+  }
+  

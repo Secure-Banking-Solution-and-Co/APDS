@@ -1,1 +1,49 @@
-<p>customer-login works!</p>
+
+<div class="container">
+    <h1>Login Portal</h1>
+    <p>customer-login works!</p>
+    <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm)">
+        <!-- the cutomer must use login with their acc number and 
+        password. The password should be saved so authentication, authorization ,all types
+        of security identification verification must be done here too -->
+        <!-- Account Number -->
+        <div>
+            <label for="accNo">Enter Account Number:</label>
+            <input type="text" id="accNo" name="accNo" ngModel required minlength="10" #enteredAccNo="ngModel">
+            <div *ngIf="enteredAccNo.invalid && enteredAccNo.touched">
+                <p style="color:red;">Account Number must be at least 10 digits</p>
+            </div>
+        </div>
+
+        <!-- Confirm Account Number -->
+        <div>
+            <label for="confirmAccNo">Confirm Account Number:</label>
+            <input type="text" id="confirmAccNo" name="confirmAccNo" ngModel required [pattern]="loginForm.value.accNo" #confirmedAccNo="ngModel">
+            <div *ngIf="confirmedAccNo.invalid && confirmedAccNo.touched">
+                <p style="color:red;">Account Number does not match</p>
+            </div>
+        </div>
+
+        <!-- Password -->
+        <div>
+            <label for="password">Enter Password:</label>
+            <input type="password" id="password" name="password" ngModel required minlength="12" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{12,}$" #enteredPassword="ngModel">
+            <div *ngIf="enteredPassword.invalid && enteredPassword.touched">
+                <p style="color:red;">Password must be at least 12 characters and include letters, numbers, and special characters.</p>
+            </div>
+        </div>
+
+        <!-- Confirm Password -->
+        <div>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" ngModel required [pattern]="loginForm.value.password" #confirmedPassword="ngModel">
+            <div *ngIf="confirmedPassword.invalid && confirmedPassword.touched">
+                <p style="color:red;">Password does not match</p>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" [disabled]="loginForm.invalid">Login</button>
+    </form>
+</div>
+
