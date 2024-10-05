@@ -6,7 +6,7 @@ import { NgForm } from '@angular/forms';
   standalone: true,
   imports: [],
   templateUrl: './customer-login.component.html',
-  styleUrl: ['./customer-login.component.css']
+  styleUrl: './customer-login.component.css'
 })
 export class CustomerLoginComponent {
 
