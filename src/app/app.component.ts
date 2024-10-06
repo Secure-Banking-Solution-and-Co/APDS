@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+//import { WelcomeComponent } from './welcome/welcome.component';
 import { CustomerRegisterComponent } from './customer/customer-register/customer-register.component';
 import { CustomerLoginComponent } from './customer/customer-login/customer-login.component';
 import { CustomerdashboardComponent } from './customer/customer-dashboard/customer-dashboard.component';
@@ -9,9 +10,11 @@ import { CustomerdashboardComponent } from './customer/customer-dashboard/custom
   standalone: true,
   imports: [
     RouterOutlet,
+   // WelcomeComponent,
     CustomerRegisterComponent,
     CustomerLoginComponent,
     CustomerdashboardComponent,
+    
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
