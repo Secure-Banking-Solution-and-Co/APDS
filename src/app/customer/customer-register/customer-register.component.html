@@ -1,118 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer Registration Portal</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        p {
-            margin: 10px 0;
-            line-height: 1.6;
-        }
-        label {
-            display: block;
-            margin: 10px 0 5px;
-        }
-        input[type="text"],
-        input[type="number"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-        }
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="form-container">
-            <h1>Customer Registration Portal</h1>
-            <p>Welcome and thank you for choosing us!</p>
-            <p>We are delighted to welcome you to our international payment platform, where your financial transactions are handled with the utmost care and security. As part of our commitment to providing you with a seamless experience, our system is designed to simplify your international payments, ensuring that you can transfer funds with confidence.</p>
-            <p>To get started, please register by providing your full name, ID number, account number, and a secure password. Rest assured, your sensitive information is protected with advanced security measures to safeguard your data.</p>
-            <p>Once registered, you can easily log in using your username, account number, and password. From there, you’ll be able to enter the payment amount, select your preferred currency, and choose a provider. We primarily utilize the SWIFT network for secure international transfers, allowing you to reach your recipients quickly and efficiently.</p>
-    <!-- explaining the ruules: Full name requires more then 2
-    characters of inout with special characters and spaces(inclusiveness)
-    Password/ID input must be more than 6 digits for valid details while allowing letters and numbers 
-    depending on the country. Account number is not less then 10 digits else it would be invalid
-    Password must include special characters, a number and a letter all in one password and must 
-    not be less then 12 chars.  -->
-            <form (Submit) = "onaddnewcustomer(addCustomer)" #addCustomer = "ngForm">
-                <label for="fname">Full Name:</label>
-                <input type="text" id="fname" name="fname" required
-                minlength="2" 
-                pattern="^[a-zA-Z\s'-]+$" 
-                #enteredName = "ngModel"> 
-    
-                <label for="idPassNo">ID/Passport Number:</label>
-                <input type="text" ngModel name="idPassNo"  required
-                minlength="6"
-                pattern="^[a-zA-Z0-9]{6,}$"
-                #enteredIDPass = "ngModel"> 
-    
-                <label for="accNo">Account Number:</label>
-                <input type="number" ngModel name="accNo"  required
-                minlength="10" 
-                pattern="^\d{10,}$" 
-                #enteredAccNum = "ngModel"> 
-    
-                <label for="uniquePassword">Password:</label>
-                <input type="password" ngModel name="uniquePassword"  required
-                minlength="12" 
-                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{12,}$" 
-                #enteredPasswd = "ngModel">
-    
-                <label for="confirmPassword">Confirm Password:</label>
-                <input type="password" ngModel name="confirmPassword"  required
-                minlength="12"
-                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{12,}$" 
-                #enteredconfPasswd = "ngModel">
-    
-                
-                <button type="submit">Let's Get Started</button> 
-            </form>
-        </div>
-    
-        <div class="divider"></div>
-    
-        <div class="links">
-            <h2>Read more on digital banking</h2>
-            <a href="https://www.swift.com" target="_blank">SWIFT</a>
-            <a href="https://www.forbes.com/advisor/banking/benefits-of-digital-banking/#:~:text=Here%20are%20some%20of%20the%20primary" target="_blank">5 Benefits Of Digital Banking</a>
-           
-        </div>
+<div class="container">
+    <div class="form-container">
+      <h1>Customer Registration Portal</h1>
+      <p>Welcome and thank you for choosing us!</p>
+      <p>We are delighted to welcome you to our international payment platform, where your financial transactions are handled with the utmost care and security.</p>
+      <p>To get started, please register by providing your full name, ID number, account number, and a secure password.</p>
+      
+      <form #addCustomer="ngForm" (ngSubmit)="onAddNewCustomer(addCustomer)">
+        <label for="fname">Full Name:</label>
+        <input type="text" id="fname" name="fname" required
+        ngModel minlength="2" 
+        pattern="^[a-zA-Z\s'-]+$" 
+        #enteredName="ngModel"> 
+      
+        <label for="idPassNo">ID/Passport Number:</label>
+        <input type="text" ngModel name="idPassNo" required
+        minlength="6"
+        pattern="^[a-zA-Z0-9]{6,}$"
+        #enteredIDPass="ngModel"> 
+      
+        <label for="accNo">Account Number:</label>
+        <input type="number" ngModel name="accNo" required
+        minlength="10" 
+        pattern="^\d{10,}$" 
+        #enteredAccNum="ngModel"> 
+      
+        <label for="uniquePassword">Password:</label>
+        <input type="password" ngModel name="uniquePassword" required
+        minlength="12" 
+        pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{12,}$" 
+        #enteredPasswd="ngModel">
+      
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" ngModel name="confirmPassword" required
+        minlength="12"
+        pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{12,}$" 
+        #enteredconfPasswd="ngModel">
+      
+        <button type="submit">Let's Get Started</button> 
+      </form>
     </div>
-    
-    </body>
-    </html>
+  
+    <div class="divider"></div>
+  
+    <div class="links">
+      <h2>Read more on digital banking</h2>
+      <a href="https://www.swift.com" target="_blank">SWIFT</a>
+      <a href="https://www.forbes.com/advisor/banking/benefits-of-digital-banking/#:~:text=Here%20are%20some%20of%20the%20primary" target="_blank">5 Benefits Of Digital Banking</a>
+    </div>
+  </div>
+  

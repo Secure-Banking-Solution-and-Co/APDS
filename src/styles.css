@@ -1,77 +1,213 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global body styling */
+body { 
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+}
+
 /* Container styling */
 .container {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f7f7f7; /* Light Grey background */
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Paragraph styling */
+p {
+  margin: 10px 0;
+  line-height: 1.6;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Label styling */
+label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #34495e; /* Greyish Black for labels */
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+/* Input fields styling */
+input[type="text"],
+input[type="number"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #bdc3c7; /* Medium Grey border */
+  border-radius: 4px;
+  background-color: #fff; /* White background */
+  font-size: 16px;
+  color: #34495e; /* Text color */
+  box-sizing: border-box;
+}
+
+/* Submit button styling */
+button {
+  background-color: #4CAF50; /* Green color */
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Disabled button state */
+button:disabled {
+  background-color: #bdc3c7; /* Medium Grey for disabled state */
+}
+
+/* Style for button with SVG icon */
+.btn-with-icon {
+  background-color: #3498db; /* Sky Blue */
+  color: white;
+  padding: 14px;
+  border: none;
+  display: inline-flex;      /* Aligns icon and text horizontally */
+  align-items: center;       /* Vertically centers icon and text */
+  padding: 10px 20px;        /* Adds padding */
+  font-size: 16px;           /* Adjust font size */
+  cursor: pointer;           /* Pointer cursor on hover */
+}
+
+.btn-with-icon .icon {
+  width: 20px;               /* Adjust the size of the SVG icon */
+  height: 20px;              /* Adjust the size of the SVG icon */
+  margin-right: 8px;         /* Adds space between icon and text */
+}
+
+/* Links styling */
+.links {
+  text-align: center;
+}
+
+.links a {
+  display: block;
+  margin: 5px 0;
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+/* Error messages */
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+/* Success messages */
+.success {
+  color: #2ecc71; /* Soft Green for success messages */
+  font-size: 14px;
+}
+
+/* Padding utility classes */
+.padded-left {
+  padding-left: 20px; /* Keep items to the left */
+}
+
+.padded-right {
+  padding-right: 20px; /* Keep items to the right */
+}
+
+.padded-top {
+  padding-top: 20px; /* Keep items on top */
+}
+
+padded-bottom {
+  padding-bottom: 20px; /* Keep items on the bottom */
+}
+
+/* Responsive media queries */
+@media (max-width: 768px) {
+  :root {
+      --padding-top: 15px;  /* Reduced padding for smaller screens */
+      --padding-bottom: 15px; /* Reduced padding for smaller screens */
   }
-  
-  /* Heading styling */
-  h1 {
-    text-align: center;
-    color: #2c3e50; /* Dark Blackish Blue for headings */
-    font-family: 'Arial', sans-serif;
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
-  
-  /* Label styling */
-  label {
-    display: block;
-    margin: 10px 0 5px;
-    color: #34495e; /* Greyish Black for labels */
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-  }
-  
-  /* Input fields styling */
-  input[type="text"], input[type="password"] {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #bdc3c7; /* Medium Grey border */
-    border-radius: 4px;
-    background-color: #fff; /* White background */
-    font-size: 16px;
-    color: #34495e; /* Text color */
-    box-sizing: border-box;
-  }
-  
-  /* Submit button styling */
-  button {
-    background-color: #3498db; /* Sky Blue */
-    color: white;
-    padding: 14px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Hover effect for the button */
-  button:hover {
-    background-color: #2980b9; /* Deep Blue on hover */
-  }
-  
-  /* Disabled button state */
-  button:disabled {
-    background-color: #bdc3c7; /* Medium Grey for disabled state */
-  }
-  
-  /* Error messages */
-  p {
-    color: red;
-    font-size: 14px;
-  }
-  
-  /* Success messages */
-  .success {
-    color: #2ecc71; /* Soft Green for success messages */
-    font-size: 14px;
-  }
-  
+}
+
+@media (max-width: 480px) {
+  :root {
+      --padding-top: 10px;  /* Further reduced padding for mobile devices */
+      --padding-bottom: 10px; /* Further reduced padding for mobile devices */
+}
+
+/* Stacked button styling */
+.stacked-button {
+  display: block;          /* Makes each button a block element */
+  width: 100%;             /* Ensures button takes full width of the container */
+  margin-bottom: 10px;     /* Adds space between each button */
+  padding: 10px;           /* Adds padding inside the button */
+  font-size: 16px;         /* Adjusts the font size */
+  cursor: pointer;         /* Adds a pointer cursor for better UX */
+}
+
+/* Pill buttons */
+.pill-group {
+display: flex;
+flex-direction: column;
+align-items: start;
+flex-wrap: wrap;
+gap: 1.25rem;
+}
+
+.pill {
+display: flex;
+align-items: center;
+--pill-accent: var(--bright-blue);
+background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
+color: var(--pill-accent);
+padding-inline: 0.75rem;
+padding-block: 0.375rem;
+border-radius: 2.75rem;
+border: 0;
+transition: background 0.3s ease;
+font-family: var(--inter-font);
+font-size: 0.875rem;
+font-style: normal;
+font-weight: 500;
+line-height: 1.4rem;
+letter-spacing: -0.00875rem;
+text-decoration: none;
+}
+
+.pill:hover {
+background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
+}
+
+.pill-group .pill:nth-child(6n + 1) {
+--pill-accent: var(--bright-blue);
+}
+.pill-group .pill:nth-child(6n + 2) {
+--pill-accent: var(--french-violet);
+}
+.pill-group .pill:nth-child(6n + 3),
+.pill-group .pill:nth-child(6n + 4),
+.pill-group .pill:nth-child(6n + 5) {
+--pill-accent: var(--hot-red);
+}
+
+.pill-group svg {
+margin-inline-start: 0.25rem;
+}
+}

@@ -1,12 +1,18 @@
 import { TmplAstBoundDeferredTrigger } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { CommonModule } from '@angular/common'; // Import CommonModule
+import { FormsModule } from '@angular/forms'; // Import FormsModule for ngModel
+
 @Component({
   selector: 'app-customer-login',
   standalone: true,
-  imports: [],
+  imports: [
+    CommonModule, // Add CommonModule
+    FormsModule, // Add FormsModule for ngModel
+  ],
   templateUrl: './customer-login.component.html',
-  styleUrl: './customer-login.component.css'
+  styleUrls: ['./customer-login.component.css'],
 })
 export class CustomerLoginComponent {
 
