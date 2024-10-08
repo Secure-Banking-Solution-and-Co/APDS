@@ -55,10 +55,10 @@ The project includes:
 
 ## Team Members
 This project was developed by the following team members:
-- [Azania Aria - ST10036066]
-- [Mushfeeq Hartnick - ST10082857]
-- [Adrian Silver - ST10082035
-- [Cameron Colley - ST10037966]
+- Azania Aria - ST10036066
+- Mushfeeq Hartnick - ST10082857
+- Adrian Silver - ST10082035
+- Cameron Colley - ST10037966
 
 ## Repository Link
 [Paste GitHub Repo Link Here]
