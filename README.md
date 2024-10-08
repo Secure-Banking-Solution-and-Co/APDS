@@ -12,7 +12,7 @@ This project was developed by the following team members:
 - Cameron Colley - ST10037966
 
 ## Repository Link
-[Paste GitHub Repo Link Here]
+[[Paste GitHub Repo Link Here]](https://github.com/Secure-Banking-Solution-and-Co/APDS.git)
 
 # Secure Banking Solutions and Co  
 A secure banking web application developed for the APDS team project, part 2.
